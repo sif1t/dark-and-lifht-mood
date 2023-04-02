@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: 'border-box';
+}
+:root{
+    --background-color: #fff;
+    --text-color: #555;
+    --title-color: #000;
+
+}
+.dark-theme{
+    --background-color: #000;
+    --text-color: #999;
+    --title-color: #fff;
+}
+body{
+    background: var(--background-color);
+    color: var(--text-color);
+    scroll-behavior: smooth;
+    transition: background 0.8s, color 0.8s;
+}
+.header{
+    width: auto;
+    min-height: 100vh;
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
+}
+nav{
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo img{
+width: 100%;
+}
+nav ul{
+    width: 100%;
+    text-align: right;
+   list-style: none;
+   margin-right: 25px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 5px 15px;
+    
+    
+}
+nav  ul li a{
+    text-decoration: none;
+    color: var(--title-color);
+    font-weight: 500;
+}
+.toggle-btn{
+background: #4864ff;
+color: #fff;
+display: flex;
+align-items: center;
+justify-content: center;
+width: 150px;
+height: 40px;
+border-radius: 20px;
+cursor: pointer;
+
+}
+.toggle-btn img{
+    width: 25px;
+    margin-left: 10px;
+}
+.content{
+    margin-top: 80px;
+    max-width: 600px;
+}
+.content h1{
+    font-size: 80px;
+    font-family: serif;
+    color: var(--title-color);
+    font-weight: 600;
+}
+content h1 span{
+    font-family: serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.content a{
+    background: #4864ff;
+    color: #fff;
+    padding: 15px 70px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 30px;
+    text-decoration: none;
+}
+.image-box img{
+    width: 500px;
+    display: block;
+}
+.image-box{
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}
+.pattern{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: rotate(40deg);
+    z-index: -1;
+
+}
+.pattern img{
+    width: 450px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: move 1s linear infinite alternate-reverse;
+}
+.pattern img:nth-child(1){
+    transform: rotate(-45deg) translate(-70px, -50px);
+    animation-delay: 0.5s;
+}
+.pattern img:nth-child(1){
+    transform: rotate(65deg) translate(-70px, -40px) scale(.8);
+    animation-delay: 0.5s;
+}
+@keyframes move {
+    100%{
+        margin-left: 40px;
+        margin-top: 20px;
+        opacity: 0.3;
+    }
+}
